@@ -1,0 +1,136 @@
+NEURATWIN-HUGO-REPO/
+│
+├── config.toml
+├── netlify.toml
+├── package.json
+│
+├── content/
+│   └── posts/
+│       ├── _index.md
+│       ├── digital-twin-smart-cities.md
+│       ├── enterprise-digital-twins.md
+│       ├── monetizing-digital-twins.md
+│       ├── ai-digital-twin-integration.md
+│       └── national-scale-digital-twins.md
+│
+├── layouts/
+│   ├── _default/
+│   │   ├── baseof.html
+│   │   ├── single.html
+│   │   └── list.html
+│
+├── static/
+│   ├── images/
+│   │   └── hero.jpg
+│   └── css/
+│       └── custom.css
+│
+└── themes/
+    └── (If using PaperMod theme via git submodule)
+
+
+============================
+
+config.toml
+
+============================
+
+baseURL = "https://neuratwin.in/"
+languageCode = "en-us"
+title = "NeuraTwin | Digital Twin Intelligence"
+theme = "PaperMod"
+
+enableRobotsTXT = true
+
+[params]
+  description = "Premium thought leadership platform on Digital Twin, 3D GIS, AI-driven infrastructure and smart governance."
+  author = "NeuraTwin"
+  ShowReadingTime = true
+  ShowShareButtons = true
+  ShowPostNavLinks = true
+
+[menu]
+  [[menu.main]]
+    name = "Insights"
+    url = "/posts/"
+    weight = 1
+
+  [[menu.main]]
+    name = "Research"
+    url = "/research/"
+    weight = 2
+
+  [[menu.main]]
+    name = "Subscribe"
+    url = "/subscribe/"
+    weight = 3
+
+
+============================
+
+netlify.toml
+
+============================
+
+[build]
+  publish = "public"
+  command = "hugo"
+
+[build.environment]
+  HUGO_VERSION = "0.121.1"
+
+
+============================
+
+Sample Blog Post
+
+File: content/posts/digital-twin-smart-cities.md
+
+============================
+
+---
+title: "Digital Twin for Smart Cities: From Visualization to Predictive Governance"
+date: 2026-02-12
+draft: false
+description: "How digital twin platforms enable predictive governance and infrastructure resilience."
+tags: ["Digital Twin", "Smart Cities", "3D GIS"]
+categories: ["Urban Intelligence"]
+---
+
+## Introduction
+
+Digital Twin platforms are redefining urban governance by integrating 3D GIS, IoT sensors, and AI analytics into a unified decision intelligence layer.
+
+## Core Architecture
+
+1. 3D Geospatial Model
+2. Real-time IoT Data Layer
+3. AI & Simulation Engine
+4. Command & Control Dashboard
+
+## Strategic Impact
+
+- Predictive infrastructure planning
+- Flood & disaster simulation
+- Revenue optimization through asset modeling
+- Reduced policy implementation risk
+
+## Conclusion
+
+Digital Twins move cities from reactive administration to predictive governance.
+
+
+============================
+
+package.json (optional for future enhancements)
+
+============================
+
+{
+  "name": "neuratwin-hugo-site",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "hugo server",
+    "build": "hugo"
+  }
+}
